@@ -4,10 +4,10 @@ const counterElement = document.getElementById('counter');
 function updateButton(isRunning) {
   if (isRunning) {
     button.textContent = "Deaktivieren";
-    button.style.backgroundColor = "#b91d1d"; // Rot
+    button.style.backgroundColor = "#b91d1d";
   } else {
     button.textContent = "Aktivieren";
-    button.style.backgroundColor = "#1DB954"; // Grün
+    button.style.backgroundColor = "#1DB954";
   }
 }
 
@@ -36,11 +36,9 @@ button.addEventListener('click', () => {
   });
   
 
-// Beim Laden direkt Status + Counter abrufen
 chrome.storage.local.get(["isRunning", "likeCounter"], (data) => {
   updateButton(data.isRunning || false);
   updateCounter();
 });
 
-// Counter regelmäßig aktualisieren
 setInterval(updateCounter, 2000);

@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Spotify Black */
+    background-color: #121212;
     color: #FFFFFF;
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -17,7 +17,7 @@ body {
   }
   
   #toggle {
-    background-color: #1DB954; /* Spotify Grün */
+    background-color: #1DB954;
     border: none;
     border-radius: 25px;
     color: white;
