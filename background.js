@@ -17,9 +17,8 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
 
             function tryAddToLikedSongs() {
               const addButton = document.querySelector('button[aria-label="Zu Lieblingssongs hinzufügen"]');
-              const playlistButton = document.querySelector('button[aria-label="Zur Playlist hinzufügen"]');
-
-              if (addButton && !playlistButton) {
+              
+              if (addButton) {
                 console.log('Song wird zu Lieblingssongs hinzugefügt...');
                 addButton.click();
                 chrome.runtime.sendMessage({ action: "incrementCounter" }).catch(() => {});
